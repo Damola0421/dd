@@ -8,7 +8,6 @@ import Navbar from "../component/Navbar";
 
 export default function Register() {
   const [step, setStep] = useState(1);
-  const [success, setSuccess] = useState<boolean>(false);
 
   const handleNext = () => {
     const form = document.querySelector("form");
@@ -26,10 +25,8 @@ export default function Register() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent form submission
-    setSuccess(true);
     alert("Registration Successful!"); // Pop-up message on successful registration
   };
-  
 
   return (
     <main>
@@ -111,28 +108,28 @@ export default function Register() {
                 </div>
                 <h4>Tertiary Details</h4>
                 <div className="col-md-12">
-                <div className="row g-3">
-                <div className="col-md-6">
-                  <label className="form-label">School Attended*</label>
-                  <input type="text" className="form-control" required />
-                </div>
-                <div className="col-md-6">
-                  <label className="form-label">Course of Study*</label>
-                  <input type="text" className="form-control" required />
-                </div>
-                <div className="col-md-6">
-                  <label className="form-label">Graduation Year*</label>
-                  <select className="form-select" required>
-                    {[...Array(50)].map((_, i) => (
-                      <option key={i}>{new Date().getFullYear() - i}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="col-md-6">
-                  <label className="form-label">Faculty*</label>
-                  <input type="text" className="form-control" required />
-                </div>
-              </div>
+                  <div className="row g-3">
+                    <div className="col-md-6">
+                      <label className="form-label">School Attended*</label>
+                      <input type="text" className="form-control" required />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-label">Course of Study*</label>
+                      <input type="text" className="form-control" required />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-label">Graduation Year*</label>
+                      <select className="form-select" required>
+                        {[...Array(50)].map((_, i) => (
+                          <option key={i}>{new Date().getFullYear() - i}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-label">Faculty*</label>
+                      <input type="text" className="form-control" required />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="mt-4 d-flex justify-content-between">
