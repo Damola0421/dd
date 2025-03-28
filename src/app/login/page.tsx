@@ -27,7 +27,7 @@ export default function Login() {
     <main>
       <nav><Navbar /></nav>
 
-      <div className="py-30 px-6 bg-white text-center">
+      <div className="py-30 px-6 bg-white text-left">
         <h2 className="text-center mb-4">Alumni Portal Login</h2>
 
         <div className="row justify-content-center">
